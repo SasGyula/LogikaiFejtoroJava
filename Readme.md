@@ -18,5 +18,5 @@ Grafikus felület, nem kell kód irás!
 ![GuiKinezet](https://github.com/user-attachments/assets/d94dd417-60ac-4d94-b9ed-51e170e08a86)
 
 ### Program müködésének elképzelése
-
+A felhasználó a láda alatti gombra kattitva leadja válaszát, majd egy felugro ablakba jelezzük, hogy tipp leadva. Ezután a "mutasd hol van" gombra kattintva egy felufro ablakban ki irjuk melyik ládában van a kincs.
 
