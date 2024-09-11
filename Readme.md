@@ -1,6 +1,6 @@
 # Logikai fejtörő
 
-## Leirás
+### Leirás
 Három láda van, az egyikbe van a kincs, mind a három ládán van felirat van. Azt tudjuk hogy csak az egyik felirat igaz. 
 Három felirat: arany láda: én rejtem a kincset
 		ezüst láda: nem én rejtem a kincset
@@ -16,3 +16,7 @@ Grafikus felület, nem kell kód irás!
 
 ## Grafikus gelület kinézete
 ![GuiKinezet](https://github.com/user-attachments/assets/d94dd417-60ac-4d94-b9ed-51e170e08a86)
+
+### Program müködésének elképzelése
+
+
