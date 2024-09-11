@@ -1,5 +1,6 @@
 # Logikai fejtörő
 
+## Leirás
 Három láda van, az egyikbe van a kincs, mind a három ládán van felirat van. Azt tudjuk hogy csak az egyik felirat igaz. 
 Három felirat: arany láda: én rejtem a kincset
 		ezüst láda: nem én rejtem a kincset
