@@ -8,4 +8,4 @@ Három felirat: arany láda: én rejtem a kincset
 Git repo létrehozás, readme fájlba a projekt leirás
 Projekt létrehozás, tervezés(uml)
 Grafikus felület, nem kell kód irás!
-<img src="GuiKinezet.png" alt="Grafikus felület">
+![GuiKinezet](https://github.com/user-attachments/assets/d94dd417-60ac-4d94-b9ed-51e170e08a86)
