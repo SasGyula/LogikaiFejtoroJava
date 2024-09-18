@@ -4,19 +4,38 @@
  */
 package ladalogikai;
 
+import java.util.Random;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author LajkóGergő(SZF_2023_
  */
 public class LogikaiGui extends javax.swing.JFrame {
-
-    /**
-     * Creates new form NewJFrame
-     */
+    String tipp;
+    Random rn = new Random();
+    String szoveg;
+    String tippSzoveg;
     public LogikaiGui() {
         initComponents();
+        tipp = " ";
+        szoveg = " ";
+        tippSzoveg = " ";
     }
-
+    
+    
+    private String kincs(){
+        int tipp = rn.nextInt(1,4);
+        if(tipp == 1){
+            return "Ezüst";
+        }else if(tipp == 2){
+            return "Arany";
+        }else if(tipp == 3){
+            return "Bronz";
+        }
+        return " ";
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -66,21 +85,41 @@ public class LogikaiGui extends javax.swing.JFrame {
         EzustBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         EzustBtn.setForeground(new java.awt.Color(255, 255, 255));
         EzustBtn.setText("Ezüst láda");
+        EzustBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EzustBtnActionPerformed(evt);
+            }
+        });
 
         AranyBtn.setBackground(new java.awt.Color(204, 153, 0));
         AranyBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         AranyBtn.setForeground(new java.awt.Color(255, 255, 255));
         AranyBtn.setText("Arany láda");
+        AranyBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AranyBtnActionPerformed(evt);
+            }
+        });
 
         BronzBtn.setBackground(new java.awt.Color(255, 102, 0));
         BronzBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BronzBtn.setForeground(new java.awt.Color(255, 255, 255));
         BronzBtn.setText("Bronz láda");
+        BronzBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BronzBtnActionPerformed(evt);
+            }
+        });
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Mutasd hol van");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jPanel1.setBorder(new javax.swing.border.MatteBorder(null));
 
@@ -216,6 +255,31 @@ public class LogikaiGui extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        nyertE();
+        JOptionPane.showMessageDialog(rootPane, szoveg);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void nyertE() {
+        if(kincs() == tipp){
+            szoveg = "Meglelted a kincset";
+        }else{
+            szoveg = "Sajnos nem lelted meg a kincset";
+        }
+    }
+
+    private void EzustBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EzustBtnActionPerformed
+        tipp = "Ezüst";
+    }//GEN-LAST:event_EzustBtnActionPerformed
+
+    private void AranyBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AranyBtnActionPerformed
+        tipp = "Arany";
+    }//GEN-LAST:event_AranyBtnActionPerformed
+
+    private void BronzBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BronzBtnActionPerformed
+        tipp = "Bronz";
+    }//GEN-LAST:event_BronzBtnActionPerformed
 
     /**
      * @param args the command line arguments
