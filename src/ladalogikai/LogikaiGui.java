@@ -16,11 +16,13 @@ public class LogikaiGui extends javax.swing.JFrame {
     Random rn = new Random();
     String szoveg;
     String tippSzoveg;
+    String kincs;
     public LogikaiGui() {
         initComponents();
         tipp = " ";
         szoveg = " ";
         tippSzoveg = " ";
+        kincs = kincs();
     }
     
     
@@ -258,11 +260,12 @@ public class LogikaiGui extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         nyertE();
-        JOptionPane.showMessageDialog(rootPane, szoveg);
+        tippSzoveg = "Tipped: " +tipp+ ". A kincs: " + kincs;
+        JOptionPane.showMessageDialog(rootPane, szoveg + "\n" + tippSzoveg);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void nyertE() {
-        if(kincs() == tipp){
+        if(kincs == tipp){
             szoveg = "Meglelted a kincset";
         }else{
             szoveg = "Sajnos nem lelted meg a kincset";
